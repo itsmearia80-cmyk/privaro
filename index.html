@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privaro | Private Ride. Personal Driver.</title>
+<meta name="description" content="Privaro. Private Ride. Personal Driver. Private car with driver for airport transfers, hospital visits, events and personal trips.">
+<meta property="og:title" content="Privaro | Private Ride. Personal Driver.">
+<meta property="og:description" content="Privaro. Private Ride. Personal Driver. Private car with driver for airport transfers, hospital visits, events and personal trips.">
+<meta property="og:image" content="assets/og.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top"><div class="wrap bar">
+  <a class="brand" href="#"><img class="mark" src="assets/mark.png" width="32" height="32" alt=""><span data-brand>Privaro</span></a>
+  <nav aria-label="Main"><a href="#services">Services</a><a href="#how">How it works</a><a href="#faq">FAQ</a><a class="btn sm" href="#booking">Book a ride</a></nav>
+</div></header>
+<main>
+<section class="hero"><div class="wrap herogrid"><div>
+  <h1>Private Ride.<br>Personal Driver.</h1>
+  <p class="lead">Private car and driver for airport transfers, hospital visits, events and personal trips. Airport, hospital, events and private trips, booked in one form.</p>
+  <div class="cta"><a class="btn" href="#booking">Book a ride</a><a class="btn ghost" id="waTop" href="#" target="_blank" rel="noopener">WhatsApp us</a></div>
+  <ul class="trust"><li>Private vehicle</li><li>Professional driver</li><li>Airport &amp; event trips</li><li>Transparent estimated pricing</li><li>Direct WhatsApp confirmation</li><li>Toll &amp; parking not included in estimate</li></ul></div>
+  <div class="logo-card"><img src="assets/logo.webp" width="900" height="541" alt="Privaro logo. Private Ride. Personal Driver."></div>
+</div></section>
+
+<section id="services" class="wrap sec"><h2>Where can we take you?</h2>
+<div class="cards">
+  <button class="card" data-service="Airport Transport"><svg viewBox="0 0 24 24"><path d="M2 16l20-6-1-2-8 1-5-5-2 .5 3 5.5-6 1-1.5-1.5-1.5.5 2.5 3.5z"/></svg><b>Airport</b><span>Airport pickup &amp; drop-off.</span></button>
+  <button class="card" data-service="Hospital Transport"><svg viewBox="0 0 24 24"><path d="M10 3h4v7h7v4h-7v7h-4v-7H3v-4h7z"/></svg><b>Hospital</b><span>Comfortable transportation for hospital visits.</span></button>
+  <button class="card" data-service="Concert / Event"><svg viewBox="0 0 24 24"><path d="M12 2l3 7 7 .5-5.5 4.5 2 7.5-6.5-4-6.5 4 2-7.5L2 9.5 9 9z"/></svg><b>Concert &amp; Event</b><span>Transportation for concerts, weddings and events.</span></button>
+  <button class="card" data-service="Private Trip"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><b>Private Trip</b><span>Personal point-to-point transportation.</span></button>
+</div></section>
+
+<section id="vehicle" class="wrap sec"><div class="vehicle">
+  <img src="assets/car.webp" width="1200" height="675" loading="lazy" alt="White Toyota Calya used by Privaro on a Jakarta main road">
+  <div><h2>Your vehicle</h2>
+    <p class="vname">Toyota Calya (New) 2026</p>
+    <ul class="specs"><li>7 seater</li><li>Comfortable</li><li>Clean</li></ul>
+    <p class="muted">The same private vehicle with a professional driver for every trip.</p></div>
+</div></section>
+
+<section id="booking" class="band"><div class="wrap narrow">
+  <h2>Book Your Ride</h2>
+  <p class="muted">Tell us where and when you need to go. We'll calculate an estimated fare and confirm your booking via WhatsApp.</p>
+  <p class="callout"><b>Toll &amp; parking are not included</b> in the estimated fare. They are charged on top if applicable, and the final fare is confirmed by the driver.</p>
+  <form id="bookingForm" novalidate>
+    <fieldset><legend>Your information</legend>
+      <label for="name">Full Name *</label><input id="name" autocomplete="name" aria-describedby="e-name"><p class="err" id="e-name" role="alert"></p>
+      <label for="whatsapp">WhatsApp Number *</label><input id="whatsapp" type="tel" inputmode="tel" placeholder="08123456789" autocomplete="tel" aria-describedby="e-whatsapp"><p class="err" id="e-whatsapp" role="alert"></p>
+    </fieldset>
+    <fieldset><legend>Your trip</legend>
+      <label for="service">Service *</label>
+      <select id="service" aria-describedby="e-service"><option value="">Choose a service</option><option>Airport Transport</option><option>Hospital Transport</option><option>Concert / Event</option><option>Private Trip</option></select><p class="err" id="e-service" role="alert"></p>
+      <div class="seg" role="radiogroup" aria-label="Trip type *"><label><input type="radio" name="tripType" value="one-way" checked><span>One Way</span></label><label><input type="radio" name="tripType" value="round-trip"><span>Round Trip</span></label></div>
+      <div class="two"><div><label for="date">Pickup Date *</label><input id="date" type="date" aria-describedby="e-date"><p class="err" id="e-date" role="alert"></p></div>
+      <div><label for="time">Pickup Time *</label><input id="time" type="time" aria-describedby="e-time"><p class="err" id="e-time" role="alert"></p></div></div>
+      <label for="pickup">Pickup Location *</label><input id="pickup" placeholder="Enter pickup location" autocomplete="off" aria-describedby="h-loc e-pickup"><p class="err" id="e-pickup" role="alert"></p>
+      <label for="destination">Destination *</label><input id="destination" placeholder="Enter destination" autocomplete="off" aria-describedby="h-loc e-destination"><p class="err" id="e-destination" role="alert"></p>
+      <p class="hint" id="h-loc">Enter a place name, address, building, hotel, hospital or airport.</p>
+      <div class="two"><div><label for="passengers">Number of Passengers *</label><input id="passengers" type="number" min="1" value="1" inputmode="numeric" aria-describedby="e-passengers"><p class="err" id="e-passengers" role="alert"></p></div>
+      <div><label for="waiting">Waiting Time</label><select id="waiting"><option value="0">No Waiting</option><option value="1">1 Hour</option><option value="2">2 Hours</option><option value="3">3 Hours</option><option value="4">4 Hours</option><option value="5">5 Hours</option><option value="6">6 Hours</option></select></div></div>
+      <p class="hint" id="waitHint"></p>
+      <label for="notes">Additional Notes</label><textarea id="notes" rows="3" maxlength="500" placeholder="Example: 2 passengers, airport pickup, flight arrival at 08:30."></textarea>
+    </fieldset>
+    <p class="err form" id="e-form" role="alert"></p>
+    <button class="btn block" id="estimateBtn" type="submit">GET ESTIMATE</button>
+  </form>
+
+  <div id="result" hidden aria-live="polite">
+    <div class="panel"><h3>Your estimate</h3><dl id="estimate"></dl>
+      <p class="note" id="routeNote"></p>
+      <p class="note strong">+ Toll &amp; parking (if applicable) are NOT included in this estimate.</p>
+      <p class="note"><b>ESTIMATED PRICE.</b> Final fare may vary depending on actual route, tolls, parking fees, route changes, waiting time, and other trip conditions. Please confirm the final fare with the driver.</p></div>
+    <div class="panel"><h3>Booking summary</h3><dl id="summary"></dl></div>
+    <button class="btn block wa" id="sendBtn" type="button">SEND BOOKING TO WHATSAPP</button>
+  </div>
+</div></section>
+
+<section id="how" class="wrap sec"><h2>How it works</h2>
+<ol class="steps"><li><b>01. Book</b><span>Tell us where and when you need the ride.</span></li><li><b>02. Get Estimate</b><span>See the estimated distance and fare.</span></li><li><b>03. Confirm</b><span>Send your booking to WhatsApp and receive confirmation from the driver.</span></li></ol></section>
+
+<section id="faq" class="wrap sec narrow"><h2>Service notes</h2>
+<details><summary>Do you transport passengers only?</summary><p>Yes. This service is for passenger transportation. It is not a courier or delivery service.</p></details>
+<details><summary>Can I book an airport transfer?</summary><p>Yes. Airport pickup and drop-off are supported.</p></details>
+<details><summary>Can I book a round trip?</summary><p>Yes.</p></details>
+<details><summary>Is waiting time included?</summary><p>Waiting time is charged separately.</p></details>
+<details><summary>How is the fare calculated?</summary><p>The estimated fare is based on the estimated road distance and selected waiting time.</p></details>
+<details><summary>Are tolls and parking included?</summary><p>No. Toll and parking fees are not included in the estimated fare unless specifically agreed.</p></details>
+<details><summary>Is the displayed fare final?</summary><p>No. The website provides an estimate. Final fare is confirmed by the driver.</p></details>
+</section>
+
+<section class="band dark"><div class="wrap cta2"><h2>Prefer to chat first?</h2><a class="btn" id="waBottom" href="#" target="_blank" rel="noopener">WhatsApp us</a></div></section>
+</main>
+<footer class="wrap foot"><b class="brand"><img class="mark" src="assets/mark.png" width="24" height="24" alt=""><span data-brand>Privaro</span></b><span id="fWa"></span><span id="fArea"></span><span id="fHours"></span></footer>
+<script src="js/config.js"></script>
+<script src="js/utils/validation.js"></script>
+<script src="js/services/pricingService.js"></script>
+<script src="js/services/googleRoutesProvider.js"></script>
+<script src="js/services/osrmProvider.js"></script>
+<script src="js/services/routingService.js"></script>
+<script src="js/services/whatsappService.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
